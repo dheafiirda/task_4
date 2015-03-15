@@ -1,0 +1,7 @@
+<h1>Galery Photo</h1>
+<% @fotos.each do |photo| %>
+	<%= photo.title %>
+	<%= link_to "Edit", edit_photo_path(photo)%>
+	<%= link_to "Delete", photo_path(photo), :method => :delete, data: {confirm: "Are u sure to delete?"}%>
+	<br>
+<% end %>
